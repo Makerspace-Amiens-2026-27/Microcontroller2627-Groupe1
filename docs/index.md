@@ -16,13 +16,14 @@ permalink: /
 > Les guides pour prendre en main ce template sont sur le
 > [site de documentation du MakerSpace](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/).
 
-# Nom du projet
+# Snake Multijoueur
 
-{: .a_modifier }
-> Remplacez le titre ci-dessus et le texte ci-dessous par une présentation de votre projet.
+Ce projet rentre dans la continuité de notre deuxième année de cycle pré ingénieur au sein d'UniLaSalle Amiens. Il entre dans le cours de microcontrôleur.
+Le but de ce projet, est de concevoir un snake multijoueur.
+- Le **joueur 1** joue au Snake sur la console que nous avons soudée en TD (microcontrôleur XIAO, écran, joystick) ;
+- Le **joueur 2** rejoint la partie depuis son téléphone, en se connectant au Wi-Fi créé par la console. Il ne joue pas au même jeu : son rôle est différent, et ses actions modifient la partie du joueur 1 en temps réel.
 
-Décrivez ici en quelques lignes l'objectif de votre projet. Quel est son but ?
-À qui est-il destiné ? Quel problème cherche-t-il à résoudre ?
+La console sert d'arbitre, elle reçoit les actions du joueur 2, les valide et met à jour le jeu. Si le téléphone se déconnecte, la partie se met en pause au lieu de planter.
 
 [Notre repo GitHub]({{ site.gh_edit_repository }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Notre projet sur Onshape](https://cad.onshape.com/){: .btn .fs-5 .mb-4 .mb-md-0 }
