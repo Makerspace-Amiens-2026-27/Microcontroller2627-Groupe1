@@ -3,6 +3,15 @@ layout: default
 nav_order: 4
 title: Études et choix techniques
 ---
+#TD 5 
+composant 1 : Joystick 
+Broche : GND ; +5V ; VRx ; VRy ; SW 
+puis code pour le commander le plus simple possible 
+
+Composant 1 : Le bouton 
+Broche S(out/
+
+
 
 # Études et choix techniques
 
