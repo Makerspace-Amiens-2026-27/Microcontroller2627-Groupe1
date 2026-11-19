@@ -22,7 +22,7 @@ au-dessus de 3000, c'est droite ou bas ; entre les deux, le joystick est consid�
 Cette zone morte évite les changements de direction parasites.
 
 Composant 3 : Buzzer 
-
+Broche : 
 
 
 # Études et choix techniques
