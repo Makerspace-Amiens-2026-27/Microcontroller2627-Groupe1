@@ -7,10 +7,21 @@ title: Études et choix techniques
 Composant 1 : Le bouton 
 Broche D5 (microco) S (Bouton) - l'alimentation en 3V3 à la VCc - la masse : gnd à gnd
 high pas appuyé et low appuyé ( constamment high sauf si boutton poussé)
+apres etape 2 : Numerotation des appuis ( qui remplace high et low)
 
-composant 1 : Joystick 
-Broche : GND ; +5V ; VRx ; VRy ; SW 
-puis code pour le commander le plus simple possible 
+composant 2 : Joystick 
+Broche : GND - GNG ; +5V- 5V ; VRx - D0 ; VRy - D1 ; SW -D2
+Résultat : au repos environ 1940 en X et Y ; si on appuie sur le joystick : select = 1  sinon select = 0
+Probleme : nos premiers seuils de détection (300 et 700) étaient prévus pour
+une Arduino Uno, dont le convertisseur analogique travaille sur 10 bits (0 à 1023).
+Notre microcontrôleur travaille sur 12 bits (0 à 4095). La valeur au repos (≈ 1940)
+dépassait donc toujours le seuil de 700, et le programme détectait « DROITE » en permanence,
+même joystick lâché.
+solution : dapter les seuils à la plage 0–4095. En dessous de 1000, c'est gauche ou haut ;
+au-dessus de 3000, c'est droite ou bas ; entre les deux, le joystick est considéré au centre.
+Cette zone morte évite les changements de direction parasites.
+
+Composant 3 : Buzzer 
 
 
 
