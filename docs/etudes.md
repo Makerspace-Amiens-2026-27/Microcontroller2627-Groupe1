@@ -22,7 +22,16 @@ au-dessus de 3000, c'est droite ou bas ; entre les deux, le joystick est consid�
 Cette zone morte évite les changements de direction parasites.
 
 Composant 3 : Buzzer 
-Broche : 
+Broche : GND-GND ; S - D3 ; 3v3 - VCC
+Utilisation : signaler les événements du jeu par un son
+2 Types de Buzzer ; nous on a un actif
+- **Actif** : produit un son fixe dès qu'il est alimenté, commandé simplement en HIGH / LOW.
+- Passif : doit recevoir une fréquence (fonction `tone()`), ce qui permet de jouer différentes notes.
+
+Composant 4 : Ecran 
+Apres branchement on obtient un ecran bkanc pourquoi : couleurs sont inversé pour parer au problème :  rajout de la ligne dans VS CODE : tft.invertDisplay(false); pour obtenir : photo avec fond noir et balle jaune 
+
+4 Composants : 
 
 
 # Études et choix techniques
