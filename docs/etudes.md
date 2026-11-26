@@ -40,7 +40,11 @@ XIAO-ESP32
 1 Led
 1 Ecran 
 1 Buzzer
-Ajout de 4 Condensateurs de découplage pour alimentation  car les composants tirent de l'énergie en même temps ce qui peut donner des valeurs incohérentes donc l'ajout des condensateurs permet de parer le problème  
+4 Condensateurs de découplage : 
+Comme on l'a vu au CM1, la XIAO possède déjà ses propres condensateurs de découplage autour de la puce. Nous faisons la même chose pour les composants ajoutés sur notre carte.
+L'écran et l'ESP32-S3 consomment des pics de courant brefs. Or les pistes se comportent comme une petite bobine, qui s'oppose à toute variation brutale de courant. Pendant un pic, le 3V3 chute donc un instant. Ce bruit fait trembler les lectures de l'ADC du joystick.
+Un condensateur sert de petite réserve d'énergie : collé au composant, il fournit le courant du pic et stabilise la tension, comme le condensateur de 100 nF qui stabilise une mesure dans le CM2.
+Il n'est efficace que tout près du composant c'est pour ça qu'on ajoute ces condensateurs.
 
 
 # Études et choix techniques
