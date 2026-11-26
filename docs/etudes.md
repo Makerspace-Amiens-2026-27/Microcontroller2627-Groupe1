@@ -31,7 +31,16 @@ Utilisation : signaler les événements du jeu par un son
 Composant 4 : Ecran 
 Apres branchement on obtient un ecran bkanc pourquoi : couleurs sont inversé pour parer au problème :  rajout de la ligne dans VS CODE : tft.invertDisplay(false); pour obtenir : photo avec fond noir et balle jaune 
 
-4 Composants : 
+4 Composants ensemble : problème : mauvais câblage au niveau de l'écran car les fils se détachaient ou étaient mal branchés - conséquence : perte de temps car on pensait que notre code n'était pas bon
+Pour rectifier le tir : tout débrancher et regarder chaque composant un à un en vérifiant les pins.
+
+KICAD - Schématique : 
+XIAO-ESP32
+2 bouttons
+1 Led
+1 Ecran 
+1 Buzzer
+Ajout de 4 Condensateurs de découplage pour alimentation  car les composants tirent de l'énergie en même temps ce qui peut donner des valeurs incohérentes donc l'ajout des condensateurs permet de parer le problème  
 
 
 # Études et choix techniques
@@ -51,7 +60,7 @@ Apres branchement on obtient un ecran bkanc pourquoi : couleurs sont inversé po
 > Voir [Rechercher l'existant et étudier la faisabilité](https://doc.makerspace-amiens.fr/workshops/methodologie-de-projet/concepts/rechercher-existant-faisabilite/).
 
 | Solution étudiée | Source | Avantages | Inconvénients | Ce qu'on retient |
-|---|---|---|---|---|
+
 | Capteur de couleur TCS3200 | Projet Hackaday similaire | Simple, bien documenté | Sensible à la luminosité ambiante | À tester sous l'éclairage réel |
 | Tri par poids (balance) | Produit du commerce | Fiable, peu de composants | Ne distingue pas verre et plastique de même poids | Écarté : ne répond pas au besoin |
 | Vision par caméra | Forum robotique | Précis, flexible | Complexe à mettre en œuvre dans le délai | Écarté pour ce projet, piste pour une v2 |
